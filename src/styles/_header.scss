@@ -6,7 +6,7 @@
   background-position: center;
   font-weight: 700;
   letter-spacing: 2px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-width) {
     height: 568px;
   }
 
@@ -17,18 +17,20 @@
     left: 0;
     bottom: 48px;
     margin: 0 120px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       position: fixed;
       top: -568px;
       left: 0;
       width: 100%;
-      height: 448px;
-      background-color: blue;
+      height: 568px;
+      background-color: #0075ff;
       margin: 0;
-      transition: all 3s ease 0s;
+      transition: all 0.3s ease 0s;
       &.active {
         top: 0;
+        box-sizing: border-box;
         padding-top: 120px;
+        padding-bottom: 60px;
       }
     }
   }
@@ -50,8 +52,7 @@
     right: 120px;
     top: 24px;
     color: $header-color;
-
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       left: 23px;
       right: 23px;
     }
@@ -61,7 +62,7 @@
   &__action {
     position: relative;
     top: 32px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       display: none;
     }
   }
@@ -82,8 +83,7 @@
       width: 35px;
       top: 0;
     }
-
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       font-size: 46px;
       line-height: 40px;
       left: 20px;
@@ -93,14 +93,14 @@
 
   &__burger {
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       display: block;
       position: relative;
       background-image: url(../images/sandwich.svg);
       width: 18px;
       height: 12px;
       z-index: 3;
-      transition: all 3s ease-in-out;
+      transition: all 0.3s ease 0s;
       &.active {
         background-image: url(../images/closeSandwich.svg);
         width: 16px;
@@ -112,7 +112,7 @@
 
   &__phone--img {
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet-width) {
       display: block;
       background-image: url(../images/phone.svg);
       width: 18px;
