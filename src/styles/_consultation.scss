@@ -1,0 +1,29 @@
+.consultation {
+  $gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &__heading {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__text {
+    width: calc(42% - #{$gap / 2});
+
+  }
+
+  &__form {
+    width: calc(42% - #{$gap / 2});
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .consultation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

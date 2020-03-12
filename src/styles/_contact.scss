@@ -1,0 +1,47 @@
+.contact {
+  $gap: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  &__info {
+    width: calc(42% - #{$gap / 2});
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    width: calc(42% - #{$gap / 2});
+    display: flex;
+    padding-bottom: 88px;
+  }
+
+  &__heading {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    color: $header-color-active;
+    margin: 0;
+  }
+
+  &__text {
+    color: #3e3e3e;
+    line-height: 2em;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    &__form,
+    &__info {
+      width: 100%;
+    }
+  }
+}

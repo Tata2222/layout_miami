@@ -4,10 +4,24 @@
 @import "header";
 @import "nav";
 @import "logo";
+@import "section";
+@import "info";
+@import "gallery";
+@import "button";
+@import "form";
+@import "consultation";
+@import "input";
+@import "testimonials";
+@import "footer";
+@import "contact";
 
 body {
   background: $c-gray;
   line-height: 16px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+}
+
+.main {
+  width: 100vw;
 }

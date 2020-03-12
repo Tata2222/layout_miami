@@ -1,13 +1,16 @@
 .header {
   position: relative;
   height: 700px;
+  width: 100vw;
+  box-sizing: border-box;
   background-image: url("../images/header.jpg");
   background-size: cover;
   background-position: center;
   font-weight: 700;
   letter-spacing: 2px;
   @media screen and (max-width: $tablet-width) {
-    height: 568px;
+    height: 100vh;
+    box-sizing: border-box;
   }
 
   &__nav {
@@ -19,10 +22,10 @@
     margin: 0 120px;
     @media screen and (max-width: $tablet-width) {
       position: fixed;
-      top: -568px;
+      top: -100%;
       left: 0;
       width: 100%;
-      height: 568px;
+      height: 100%;
       background-color: #0075ff;
       margin: 0;
       transition: all 0.3s ease 0s;

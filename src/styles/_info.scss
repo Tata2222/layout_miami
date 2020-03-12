@@ -1,0 +1,40 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  &__heading {
+    max-width: 350px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: bold;
+    color: $link-color;
+    @include hover(color, rgba(0, 117, 255, 0.5));
+  }
+
+  &__text {
+    max-width: 500px;
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .info {
+    flex-direction: column;
+
+    &__heading {
+      margin-bottom: 48px;
+    }
+  }
+}

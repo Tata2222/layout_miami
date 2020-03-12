@@ -1,0 +1,41 @@
+.section {
+  padding: 152px 9% 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 27px;
+  background-color: white;
+
+  &__heading {
+    position: relative;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.5px;
+    text-align: center;
+    margin-bottom: 93px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 16px;
+      background-image: url("../images/crown.svg");
+      background-repeat: no-repeat;
+      top: calc(100% + 7px);
+      right: calc(50% - 23px / 2);
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .section {
+    padding: 64px 6% 0;
+    &__heading {
+      margin-bottom: 53px;
+    }
+  }
+}

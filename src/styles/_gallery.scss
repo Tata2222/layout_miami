@@ -1,0 +1,54 @@
+.gallery {
+  &__caption {
+    margin: 24px 0 40px;
+  }
+
+  .photos {
+    display: flex;
+    justify-content: space-around;
+
+    &__img1,
+    &__img2,
+    &__img3,
+    &__img4,
+    &__img5,
+    &__img6 {
+      width: calc(50% - #{$gap / 2});
+      height: 256px;
+      background-position: center;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      @media screen and (max-width: $tablet-width) {
+        height: 131px;
+      }
+    }
+
+    &__img1,
+    &__img6 {
+      width: calc(67% - #{$gap / 2});
+    }
+
+    &__img2,
+    &__img5 {
+      width: calc(33% - #{$gap / 2});
+    }
+
+    &__img3,
+    &__img4 {
+      width: calc(50% - #{$gap / 2});
+    }
+  }
+
+  &__btn {
+    margin: 40px auto 0;
+    width: 188px;
+  }
+}
+
+.link {
+  color: $link-color;
+  font-weight: 700;
+  text-decoration: none;
+  @include hover(color, rgba(0, 117, 255, 0.5));
+}
