@@ -27,11 +27,17 @@
     &__img1,
     &__img6 {
       width: calc(67% - #{$gap / 2});
+      @media screen and (max-width: $tablet-width) {
+        width: calc(50% - #{$gap / 2});
+      }
     }
 
     &__img2,
     &__img5 {
       width: calc(33% - #{$gap / 2});
+      @media screen and (max-width: $tablet-width) {
+        width: calc(50% - #{$gap / 2});
+      }
     }
 
     &__img3,

@@ -4,9 +4,10 @@
   justify-content: space-between;
 
   &__info {
-    width: calc(42% - #{$gap / 2});
     display: flex;
     justify-content: space-between;
+    width: calc(42% - #{$gap / 2});
+
     @media screen and (max-width: $tablet-width) {
       display: flex;
       flex-direction: column;
@@ -15,7 +16,6 @@
 
   &__form {
     width: calc(42% - #{$gap / 2});
-    display: flex;
     padding-bottom: 88px;
   }
 
@@ -28,7 +28,8 @@
   }
 
   &__text {
-    color: #3e3e3e;
+    color: $section-text-color;
+    min-width: 175px;
     line-height: 2em;
     margin-top: 8px;
     margin-bottom: 24px;
