@@ -7,6 +7,12 @@ body {
   margin: 0;
   padding: 0; }
 
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
 .header {
   position: relative;
   height: 700px;
@@ -37,12 +43,13 @@ body {
         position: fixed;
         top: -100%;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
         background-color: #0075ff;
         margin: 0;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
         .header__nav.active {
           top: 0;
           -webkit-box-sizing: border-box;
@@ -108,6 +115,8 @@ body {
         display: block;
         position: relative;
         background-image: url(../images/sandwich.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
         width: 18px;
         height: 12px;
         z-index: 3;
@@ -124,6 +133,8 @@ body {
       .header__phone--img {
         display: block;
         background-image: url(../images/phone.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
         width: 18px;
         height: 18px; } }
 
@@ -200,7 +211,8 @@ body {
   position: relative;
   font-size: 16px;
   line-height: 27px;
-  background-color: white; }
+  background-color: white;
+  color: #3e3e3e; }
   .section__heading {
     position: relative;
     font-weight: 700;
@@ -208,7 +220,8 @@ body {
     line-height: 48px;
     letter-spacing: -1.5px;
     text-align: center;
-    margin-bottom: 93px; }
+    margin-bottom: 93px;
+    color: #000; }
     .section__heading::after {
       content: "";
       position: absolute;
@@ -287,8 +300,14 @@ body {
         height: 131px; } }
   .gallery .photos__img1, .gallery .photos__img6 {
     width: calc(67% - 10px); }
+    @media screen and (max-width: 768px) {
+      .gallery .photos__img1, .gallery .photos__img6 {
+        width: calc(50% - 10px); } }
   .gallery .photos__img2, .gallery .photos__img5 {
     width: calc(33% - 10px); }
+    @media screen and (max-width: 768px) {
+      .gallery .photos__img2, .gallery .photos__img5 {
+        width: calc(50% - 10px); } }
   .gallery .photos__img3, .gallery .photos__img4 {
     width: calc(50% - 10px); }
 
@@ -315,8 +334,8 @@ body {
           box-sizing: border-box;
   border-radius: 8px;
   height: 56px;
-  -webkit-transition: all 03s ease 0s;
-  transition: all 03s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transition-property: background-color color box-shadow;
   transition-property: background-color color box-shadow; }
   .button:hover {
@@ -371,13 +390,16 @@ body {
             flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+    .consultation__text {
+      width: 100%; }
+    .consultation__form {
+      width: 100%; } }
 
 .input {
   height: 48px;
   font-weight: normal;
   font-size: 14px;
-  line-height: 14px;
   background: #f7f8ff;
   border: 1px solid #fff;
   -webkit-box-sizing: border-box;
@@ -395,6 +417,8 @@ body {
   .input::placeholder {
     color: #b9c1ce; }
   .input__texterea {
+    font-family: "Roboto", sans-serif;
+    line-height: 27px;
     height: 144px;
     padding-top: 14px;
     margin-bottom: 16px; }
@@ -453,13 +477,13 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .contact__info {
-    width: calc(42% - 10px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    width: calc(42% - 10px); }
     @media screen and (max-width: 768px) {
       .contact__info {
         display: -webkit-box;
@@ -471,9 +495,6 @@ body {
                 flex-direction: column; } }
   .contact__form {
     width: calc(42% - 10px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     padding-bottom: 88px; }
   .contact__heading {
     font-weight: normal;
@@ -483,6 +504,7 @@ body {
     margin: 0; }
   .contact__text {
     color: #3e3e3e;
+    min-width: 175px;
     line-height: 2em;
     margin-top: 8px;
     margin-bottom: 24px; }
