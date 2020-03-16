@@ -16,12 +16,13 @@
   &__nav {
     position: absolute;
     display: flex;
-    right: 0;
-    left: 0;
+    right: 25px;
+    left: 25px;
     bottom: 48px;
-    margin: 0 120px;
+    min-width: 800px;
+    margin: auto;
     @media screen and (max-width: $tablet-width) {
-      position: fixed;
+      position: relative;
       top: -100%;
       left: 0;
       width: 100vw;
@@ -29,7 +30,6 @@
       overflow: hidden;
       background-color: #0075ff;
       margin: 0;
-   
       transition: all 0.3s ease;
       &.active {
         top: 0;
@@ -52,14 +52,17 @@
   &__top {
     position: absolute;
     display: flex;
+    height: 70%;
     justify-content: space-between;
-    left: 120px;
-    right: 120px;
+    left: 25px;
+    right: 25px;
     top: 24px;
     color: $header-color;
+    margin: auto;
     @media screen and (max-width: $tablet-width) {
-      left: 23px;
-      right: 23px;
+      position: absolute;
+      left: 25px;
+      right: 25px;
     }
   }
 
@@ -74,11 +77,11 @@
 
   &__text {
     position: absolute;
-    top: 372px;
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -1.5px;
     padding-top: 16px;
+    bottom: 0;
 
     &::before {
       content: "";
@@ -92,7 +95,7 @@
       font-size: 46px;
       line-height: 40px;
       left: 20px;
-      bottom: 80px;
+      bottom: 0;
     }
   }
 
